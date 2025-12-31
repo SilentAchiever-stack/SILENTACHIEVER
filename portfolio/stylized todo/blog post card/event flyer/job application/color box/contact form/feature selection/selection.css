@@ -1,0 +1,14 @@
+body{
+    background-color: aquamarine;
+}
+h1{
+    color:blue;
+}
+.checbox{
+    appearance:none;
+    border: 2px solid red;
+    background-color:purple;
+}
+.checkbox:checked{
+    background-color:blue;
+}

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Swallow - Fine Dining Experience</title>
+    <link rel="stylesheet" href="sarah-swallow.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Sarah Swallow</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#reservations" class="nav-link">Reservations</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="reservation-btn" onclick="scrollToSection('reservations')">
+                        <i class="fas fa-calendar-alt"></i>
+                        Reserve Table
+                    </button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Sarah Swallow</h1>
+                <p class="hero-subtitle">Fine Dining Experience</p>
+                <p class="hero-description">Indulge in culinary excellence where every dish tells a story of passion,
+                    creativity, and the finest ingredients.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('menu')">
+                        <i class="fas fa-book-open"></i>
+                        View Menu
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('reservations')">
+                        <i class="fas fa-calendar-check"></i>
+                        Make Reservation
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="chef-illustration">
+                    <i class="fas fa-chef-hat"></i>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-item"><i class="fas fa-wine-glass"></i></div>
+                    <div class="floating-item"><i class="fas fa-leaf"></i></div>
+                    <div class="floating-item"><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Exquisite Menu</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All Dishes</button>
+                <button class="category-btn" data-category="appetizers">Appetizers</button>
+                <button class="category-btn" data-category="mains">Main Courses</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="beverages">Beverages</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Appetizers -->
+                <div class="menu-item" data-category="appetizers">
+                    <div class="menu-item-image">
+                        <i class="fas fa-shrimp"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Truffle Arancini</h3>
+                        <p>Crispy risotto balls filled with truffle and parmesan, served with saffron aioli</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$18</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(1)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="appetizers">
+                    <div class="menu-item-image">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Seared Scallops</h3>
+                        <p>Pan-seared scallops with cauliflower purée and crispy pancetta</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$24</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(2)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="appetizers">
+                    <div class="menu-item-image">
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Burrata Caprese</h3>
+                        <p>Fresh burrata with heirloom tomatoes, basil oil, and aged balsamic</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$16</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(3)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Courses -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-image">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Wagyu Beef Tenderloin</h3>
+                        <p>Premium wagyu beef with roasted vegetables and red wine reduction</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$65</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(4)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-image">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chilean Sea Bass</h3>
+                        <p>Miso-glazed sea bass with jasmine rice and Asian vegetables</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$42</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(5)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-image">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Mushroom Wellington</h3>
+                        <p>Wild mushroom wellington with truffle sauce and seasonal vegetables</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$38</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(6)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chocolate Soufflé</h3>
+                        <p>Dark chocolate soufflé with vanilla bean ice cream and gold leaf</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$14</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(7)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Tarte Tatin</h3>
+                        <p>Classic French apple tart with cinnamon ice cream and caramel sauce</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$12</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(8)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Crème Brûlée</h3>
+                        <p>Vanilla bean crème brûlée with fresh berries and shortbread</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$11</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(9)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-item" data-category="beverages">
+                    <div class="menu-item-image">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Château Margaux 2015</h3>
+                        <p>Premium Bordeaux wine with notes of blackcurrant and cedar</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$180</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(10)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverages">
+                    <div class="menu-item-image">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Golden Swallow</h3>
+                        <p>Signature cocktail with premium gin, elderflower, and gold flakes</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$16</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(11)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverages">
+                    <div class="menu-item-image">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Ethiopian Single Origin</h3>
+                        <p>Premium coffee beans with notes of chocolate and citrus</p>
+                        <div class="menu-item-footer">
+                            <span class="price">$8</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(12)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Sarah Swallow</h2>
+                    <p>Welcome to Sarah Swallow, where culinary artistry meets exceptional dining. Our restaurant is
+                        named after our renowned chef, Sarah Swallow, who brings over 15 years of Michelin-starred
+                        experience to create unforgettable dining experiences.</p>
+                    <p>Every dish is crafted with passion, using only the finest locally-sourced ingredients and
+                        innovative techniques that honor both tradition and creativity.</p>
+                    <div class="chef-stats">
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>2</h3>
+                            <p>Michelin Stars</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Awards Won</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="chef-portrait">
+                        <i class="fas fa-user-chef"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="reservations">
+        <div class="container">
+            <h2 class="section-title">Make a Reservation</h2>
+            <div class="reservation-content">
+                <div class="reservation-form-wrapper">
+                    <form id="reservationForm" class="reservation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests *</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="">Select guests</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5 Guests</option>
+                                    <option value="6">6 Guests</option>
+                                    <option value="7">7 Guests</option>
+                                    <option value="8">8 Guests</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select time</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="17:30">5:30 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="18:30">6:30 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="19:30">7:30 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="20:30">8:30 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="occasion">Special Occasion</label>
+                            <select id="occasion" name="occasion">
+                                <option value="">Select occasion</option>
+                                <option value="birthday">Birthday</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="business">Business Dinner</option>
+                                <option value="romantic">Romantic Dinner</option>
+                                <option value="celebration">Celebration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="requests">Special Requests</label>
+                            <textarea id="requests" name="requests" rows="4"
+                                placeholder="Any dietary restrictions, allergies, or special requests..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            Confirm Reservation
+                        </button>
+                    </form>
+                </div>
+                <div class="reservation-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-clock"></i> Opening Hours</h3>
+                        <div class="hours-list">
+                            <div class="hour-item">
+                                <span>Tuesday - Thursday</span>
+                                <span>5:00 PM - 10:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>Friday - Saturday</span>
+                                <span>5:00 PM - 11:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>Sunday</span>
+                                <span>5:00 PM - 9:00 PM</span>
+                            </div>
+                            <div class="hour-item closed">
+                                <span>Monday</span>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-info-circle"></i> Reservation Policy</h3>
+                        <ul>
+                            <li>Reservations recommended for all parties</li>
+                            <li>24-hour cancellation policy</li>
+                            <li>Smart casual dress code</li>
+                            <li>Maximum party size: 8 guests</li>
+                            <li>Children welcome until 8:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>123 Gourmet Street<br>Culinary District, CD 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567<br>Reservations & Inquiries</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@sarahswallow.com<br>reservations@sarahswallow.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Sarah Swallow</span>
+                    </div>
+                    <p>Fine dining experience where culinary artistry meets exceptional service. Join us for an
+                        unforgettable gastronomic journey.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservations">Reservations</a></li>
+                        <li><a href="#about">About Chef</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Private Dining</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Wine Pairing</a></li>
+                        <li><a href="#">Chef's Table</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for exclusive offers and culinary updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sarah Swallow Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-utensils"></i>
+                <p>Your order is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="btn btn-primary checkout-btn">
+                <i class="fas fa-credit-card"></i>
+                Place Order
+            </button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h2>Reservation Confirmed!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for choosing Sarah Swallow. Your reservation has been confirmed.</p>
+                <div class="reservation-details" id="reservationDetails">
+                    <!-- Details will be inserted here -->
+                </div>
+                <p class="confirmation-note">
+                    <i class="fas fa-info-circle"></i>
+                    A confirmation email has been sent to your address.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="closeModal()">
+                    <i class="fas fa-check"></i> Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="sarah-swallow.js"></script>
+</body>
+
+</html>

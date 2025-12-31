@@ -1,0 +1,31 @@
+div{
+    background:linear-gradient(135deg,green,orange,yellow);
+    height:300px;
+    text-align:center ;
+    margin:5px;
+    }
+#ussername,#mytext{
+    font-size: 20px;
+    font-weight: bold;
+margin:20px;
+border-radius:2px;
+border: 1px solid rgb(239, 220, 6)!important;
+border-top: 3px!important;
+font-size: larger;
+}
+#username,#mytext,#mysubmit:focus{
+    background:linear-gradient(135deg, rgb(6, 252, 6), orange, yellow);
+    border:2px solid yellow;
+}
+#mytext{
+    font-size: 20px;
+         margin: 10px;
+        border-radius: 2px;
+        border-top: 3px;
+}
+#mysubmit{
+    background-color:rgb(3, 251, 36);
+    color:black;
+    border-radius:5px;
+    
+}

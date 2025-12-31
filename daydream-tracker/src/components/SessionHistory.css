@@ -1,0 +1,236 @@
+.history-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.history-controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 87, 34, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 87, 34, 0.1);
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.control-group label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #7f8c8d;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #bdc3c7;
+}
+
+.empty-state h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.sessions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.day-group {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 87, 34, 0.1);
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255, 87, 34, 0.1);
+}
+
+.day-header h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.day-stats {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.session-count {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.day-total {
+    background: rgba(255, 87, 34, 0.1);
+    color: #ff5722;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.day-sessions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.session-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.session-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.session-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.session-type {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: capitalize;
+}
+
+.session-type i {
+    font-size: 1.2rem;
+}
+
+.session-duration {
+    background: linear-gradient(135deg, #ff5722, #ff7043);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.session-time {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.session-trigger,
+.session-notes {
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    border-left: 3px solid #ff5722;
+}
+
+.session-trigger strong,
+.session-notes strong {
+    color: #2c3e50;
+    margin-right: 0.5rem;
+}
+
+.session-actions {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.btn-sm {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    min-width: auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .history-controls {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .day-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .day-stats {
+        align-self: stretch;
+        justify-content: space-between;
+    }
+
+    .session-header {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+    }
+
+    .session-actions {
+        position: static;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .day-group {
+        padding: 1rem;
+    }
+
+    .session-card {
+        padding: 1rem;
+    }
+
+    .day-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .session-count,
+    .day-total {
+        text-align: center;
+    }
+}

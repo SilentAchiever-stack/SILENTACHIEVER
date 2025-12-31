@@ -1,0 +1,27 @@
+.form-container{
+    background-color:beige;
+    border-radius:10px auto;
+    padding:20px;
+    width:600px;
+}
+label{
+    font-color:green;
+    font-weight:bold;
+    margin:10px;
+}
+input[type="text"], input[type="email"], textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+button{
+    background-color:green;
+    color:white;
+    padding:10px 15px;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+}
+

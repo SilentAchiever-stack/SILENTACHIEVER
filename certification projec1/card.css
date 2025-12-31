@@ -1,0 +1,9 @@
+.playing-cards{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    border:2px solid black;
+}
+div[class^="card-"]{
+    justify-content:space-between;
+}

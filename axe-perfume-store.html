@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXE Collection Store - Premium Fragrances</title>
+    <link rel="stylesheet" href="axe-perfume-store.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-spray-can"></i>
+                    <span>AXE Collection</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#collections" class="nav-link">Collections</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="user-btn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" placeholder="Search for fragrances..." id="searchInput">
+                <button class="search-submit">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="search-close" onclick="toggleSearch()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Discover Your Signature Scent</h1>
+            <p>Premium fragrances that define your style and elevate your presence</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('products')">
+                    <i class="fas fa-shopping-bag"></i>
+                    Shop Now
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('collections')">
+                    <i class="fas fa-eye"></i>
+                    View Collections
+                </button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Premium Fragrances</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Customer Support</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Featured Fragrances</h2>
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="men">For Men</button>
+                <button class="filter-btn" data-filter="women">For Women</button>
+                <button class="filter-btn" data-filter="unisex">Unisex</button>
+                <button class="filter-btn" data-filter="limited">Limited Edition</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- AXE Dark Temptation -->
+                <div class="product-card" data-category="men" data-id="1">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=500&fit=crop"
+                            alt="AXE Dark Temptation">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" onclick="quickView(1)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="wishlist-btn" onclick="toggleWishlist(1)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-badge">Best Seller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>AXE Dark Temptation</h3>
+                        <p class="product-category">Men's Fragrance</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$45.99</span>
+                            <span class="original-price">$59.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(1)">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AXE Phoenix -->
+                <div class="product-card" data-category="men" data-id="2">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=500&fit=crop"
+                            alt="AXE Phoenix">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" onclick="quickView(2)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="wishlist-btn" onclick="toggleWishlist(2)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>AXE Phoenix</h3>
+                        <p class="product-category">Men's Fragrance</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$42.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(2)">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AXE Black -->
+                <div class="product-card" data-category="men" data-id="3">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59d32?w=400&h=500&fit=crop"
+                            alt="AXE Black">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" onclick="quickView(3)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="wishlist-btn" onclick="toggleWishlist(3)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-badge new">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>AXE Black</h3>
+                        <p class="product-category">Men's Fragrance</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$48.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(3)">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AXE Anarchy For Her -->
+                <div class="product-card" data-category="women" data-id="4">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=500&fit=crop"
+                            alt="AXE Anarchy For Her">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" onclick="quickView(4)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="wishlist-btn" onclick="toggleWishlist(4)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>AXE Anarchy For Her</h3>
+                        <p class="product-category">Women's Fragrance</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$52.99</span>
+                            <span class="original-price">$65.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(4)">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AXE Apollo -->
+                <div class="product-card" data-category="men" data-id="5">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400&h=500&fit=crop"
+                            alt="AXE Apollo">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" onclick="quickView(5)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="wishlist-btn" onclick="toggleWishlist(5)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>AXE Apollo</h3>
+                        <p class="product-category">Men's Fragrance</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$44.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(5)">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AXE Unity -->
+                <div class="product-card" data-category="unisex" data-id="6">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400&h=500&fit=crop"
+                            alt="AXE Unity">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" onclick="quickView(6)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="wishlist-btn" onclick="toggleWishlist(6)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-badge limited">Limited</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>AXE Unity</h3>
+                        <p class="product-category">Unisex Fragrance</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$55.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(6)">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <h2 class="section-title">Our Collections</h2>
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop"
+                            alt="Signature Collection">
+                        <div class="collection-overlay">
+                            <div class="collection-content">
+                                <h3>Signature Collection</h3>
+                                <p>Timeless fragrances for the modern individual</p>
+                                <button class="btn btn-outline">Explore Collection</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
+                            alt="Limited Edition">
+                        <div class="collection-overlay">
+                            <div class="collection-content">
+                                <h3>Limited Edition</h3>
+                                <p>Exclusive fragrances for the discerning taste</p>
+                                <button class="btn btn-outline">Explore Collection</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=600&h=400&fit=crop"
+                            alt="Fresh & Clean">
+                        <div class="collection-overlay">
+                            <div class="collection-content">
+                                <h3>Fresh & Clean</h3>
+                                <p>Light and refreshing scents for everyday wear</p>
+                                <button class="btn btn-outline">Explore Collection</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About AXE Collection</h2>
+                    <p>For over two decades, AXE has been at the forefront of men's grooming and fragrance innovation.
+                        Our collection represents the perfect blend of sophistication, confidence, and modern
+                        masculinity.</p>
+                    <p>Each fragrance in our collection is carefully crafted to help you express your unique personality
+                        and make a lasting impression wherever you go.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-award"></i>
+                            <span>Premium Quality</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Fast Delivery</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-undo"></i>
+                            <span>Easy Returns</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=600&fit=crop"
+                        alt="About AXE">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Our Store</h4>
+                            <p>123 Fragrance Avenue<br>New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567<br>Mon-Fri 9AM-6PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@axecollection.com<br>support@axecollection.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-spray-can"></i>
+                        <span>AXE Collection</span>
+                    </div>
+                    <p>Discover your signature scent with our premium collection of fragrances designed to elevate your
+                        presence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new arrivals and exclusive offers</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AXE Collection Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="btn btn-primary checkout-btn">
+                <i class="fas fa-credit-card"></i>
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalProductName">Product Name</h3>
+                <button class="modal-close" onclick="closeQuickView()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-product-image">
+                    <img id="modalProductImage" src="" alt="">
+                </div>
+                <div class="modal-product-info">
+                    <p id="modalProductCategory">Category</p>
+                    <div class="modal-product-rating" id="modalProductRating">
+                        <!-- Stars will be inserted here -->
+                    </div>
+                    <div class="modal-product-price" id="modalProductPrice">
+                        <!-- Price will be inserted here -->
+                    </div>
+                    <p id="modalProductDescription">Product description will be displayed here.</p>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" id="modalAddToCart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                        <button class="btn btn-secondary" id="modalWishlist">
+                            <i class="far fa-heart"></i>
+                            Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="axe-perfume-store.js"></script>
+</body>
+
+</html>

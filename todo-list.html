@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Todo List</title>
+    <link rel="stylesheet" href="todo-list.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <!-- Header -->
+            <header class="app-header">
+                <div class="header-content">
+                    <h1><i class="fas fa-tasks"></i> TaskFlow</h1>
+                    <p class="tagline">Organize your life, one task at a time</p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalTasks">0</span>
+                        <span class="stat-label">Total</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="completedTasks">0</span>
+                        <span class="stat-label">Done</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="pendingTasks">0</span>
+                        <span class="stat-label">Pending</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Add Task Section -->
+            <section class="add-task-section">
+                <div class="add-task-container">
+                    <form id="taskForm" class="task-form">
+                        <div class="input-group">
+                            <input type="text" id="taskInput" placeholder="What needs to be done?" required
+                                autocomplete="off">
+                            <select id="prioritySelect" class="priority-select">
+                                <option value="low">Low Priority</option>
+                                <option value="medium" selected>Medium Priority</option>
+                                <option value="high">High Priority</option>
+                            </select>
+                            <select id="categorySelect" class="category-select">
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="health">Health</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <button type="submit" class="add-btn">
+                                <i class="fas fa-plus"></i>
+                                Add Task
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Filter and Sort Controls -->
+            <section class="controls-section">
+                <div class="controls-container">
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-list"></i>
+                            All Tasks
+                        </button>
+                        <button class="filter-btn" data-filter="pending">
+                            <i class="fas fa-clock"></i>
+                            Pending
+                        </button>
+                        <button class="filter-btn" data-filter="completed">
+                            <i class="fas fa-check"></i>
+                            Completed
+                        </button>
+                    </div>
+                    <div class="sort-controls">
+                        <select id="sortSelect" class="sort-select">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="priority">Priority</option>
+                            <option value="category">Category</option>
+                            <option value="alphabetical">A-Z</option>
+                        </select>
+                        <button id="clearCompleted" class="clear-btn">
+                            <i class="fas fa-trash"></i>
+                            Clear Completed
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tasks List -->
+            <section class="tasks-section">
+                <div class="tasks-container">
+                    <div id="tasksList" class="tasks-list">
+                        <!-- Tasks will be dynamically added here -->
+                    </div>
+                    <div id="emptyState" class="empty-state">
+                        <div class="empty-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>No tasks yet</h3>
+                        <p>Add your first task to get started!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section class="progress-section">
+                <div class="progress-container">
+                    <h3>Today's Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progressText">0% Complete</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Task Edit Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-edit"></i> Edit Task</h3>
+                <button class="close-btn" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <div class="form-group">
+                        <label for="editTaskText">Task Description</label>
+                        <input type="text" id="editTaskText" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editPriority">Priority</label>
+                            <select id="editPriority">
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editCategory">Category</label>
+                            <select id="editCategory">
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="health">Health</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelEdit">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage">Task added successfully!</span>
+        </div>
+    </div>
+
+    <script src="todo-list.js"></script>
+</body>
+
+</html>

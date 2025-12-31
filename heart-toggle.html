@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Toggle Button</title>
+    <link rel="stylesheet" href="heart-toggle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="demo-section">
+            <h1>Heart Toggle Button Demo</h1>
+            <p>Click the hearts to toggle between liked and unliked states</p>
+
+            <!-- Different heart button variations -->
+            <div class="hearts-grid">
+                <!-- Basic Heart Button -->
+                <div class="heart-container">
+                    <button class="heart-btn" data-heart="basic">
+                        <i class="far fa-heart heart-icon"></i>
+                        <i class="fas fa-heart heart-icon-filled"></i>
+                    </button>
+                    <span class="heart-label">Basic Heart</span>
+                </div>
+
+                <!-- Heart with Counter -->
+                <div class="heart-container">
+                    <button class="heart-btn heart-with-counter" data-heart="counter">
+                        <i class="far fa-heart heart-icon"></i>
+                        <i class="fas fa-heart heart-icon-filled"></i>
+                        <span class="heart-count">42</span>
+                    </button>
+                    <span class="heart-label">With Counter</span>
+                </div>
+
+                <!-- Animated Heart -->
+                <div class="heart-container">
+                    <button class="heart-btn heart-animated" data-heart="animated">
+                        <i class="far fa-heart heart-icon"></i>
+                        <i class="fas fa-heart heart-icon-filled"></i>
+                    </button>
+                    <span class="heart-label">Animated</span>
+                </div>
+
+                <!-- Pulse Heart -->
+                <div class="heart-container">
+                    <button class="heart-btn heart-pulse" data-heart="pulse">
+                        <i class="far fa-heart heart-icon"></i>
+                        <i class="fas fa-heart heart-icon-filled"></i>
+                    </button>
+                    <span class="heart-label">Pulse Effect</span>
+                </div>
+
+                <!-- Gradient Heart -->
+                <div class="heart-container">
+                    <button class="heart-btn heart-gradient" data-heart="gradient">
+                        <i class="far fa-heart heart-icon"></i>
+                        <i class="fas fa-heart heart-icon-filled"></i>
+                    </button>
+                    <span class="heart-label">Gradient</span>
+                </div>
+
+                <!-- Large Heart -->
+                <div class="heart-container">
+                    <button class="heart-btn heart-large" data-heart="large">
+                        <i class="far fa-heart heart-icon"></i>
+                        <i class="fas fa-heart heart-icon-filled"></i>
+                    </button>
+                    <span class="heart-label">Large Size</span>
+                </div>
+
+                <!-- Heart with Text -->
+                <div class="heart-container">
+                    <button class="heart-btn heart-with-text" data-heart="text">
+                        <i class="far fa-heart heart-icon"></i>
+                        <i class="fas fa-heart heart-icon-filled"></i>
+                        <span class="heart-text">Like</span>
+                    </button>
+                    <span class="heart-label">With Text</span>
+                </div>
+
+                <!-- Bouncy Heart -->
+                <div class="heart-container">
+                    <button class="heart-btn heart-bouncy" data-heart="bouncy">
+                        <i class="far fa-heart heart-icon"></i>
+                        <i class="fas fa-heart heart-icon-filled"></i>
+                    </button>
+                    <span class="heart-label">Bouncy</span>
+                </div>
+            </div>
+
+            <!-- Status Display -->
+            <div class="status-section">
+                <h2>Heart Status</h2>
+                <div class="status-grid" id="statusGrid">
+                    <!-- Status items will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls-section">
+                <h2>Controls</h2>
+                <div class="controls">
+                    <button class="control-btn" id="likeAllBtn">
+                        <i class="fas fa-heart"></i>
+                        Like All
+                    </button>
+                    <button class="control-btn" id="unlikeAllBtn">
+                        <i class="far fa-heart"></i>
+                        Unlike All
+                    </button>
+                    <button class="control-btn" id="resetCountersBtn">
+                        <i class="fas fa-redo"></i>
+                        Reset Counters
+                    </button>
+                    <button class="control-btn" id="randomToggleBtn">
+                        <i class="fas fa-random"></i>
+                        Random Toggle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-heart"></i>
+            <span id="toastMessage">Heart toggled!</span>
+        </div>
+    </div>
+
+    <script src="heart-toggle.js"></script>
+</body>
+
+</html>

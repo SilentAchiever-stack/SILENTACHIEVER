@@ -1,0 +1,22 @@
+body{
+    background-color:#f4f4f4;
+}
+.color-box{
+    width:150px;
+    height:150px;
+}
+.color1{
+    background-color:#ff5733;
+}
+.color2{
+    background-color:#33ff57;
+}
+.color3{
+    background-color:#3357ff;
+}
+.color4{
+    background-color:#f1c40f;
+}
+.color5{
+    background-color:#8e44ad;
+}

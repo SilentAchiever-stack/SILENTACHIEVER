@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADE'S Collection - Premium Cosmetics</title>
+    <link rel="stylesheet" href="ades-cosmetics.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-gem"></i>
+                    <span>ADE'S Collection</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#collections" class="nav-link">Collections</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Discover Your Beauty</h1>
+                <p>Premium cosmetics crafted for the modern woman. Explore our exclusive collections of skincare,
+                    makeup, and perfumes.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('collections')">
+                        <i class="fas fa-star"></i>
+                        Shop Collections
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('products')">
+                        <i class="fas fa-eye"></i>
+                        View Products
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-elements">
+                    <div class="floating-item"><i class="fas fa-heart"></i></div>
+                    <div class="floating-item"><i class="fas fa-star"></i></div>
+                    <div class="floating-item"><i class="fas fa-gem"></i></div>
+                    <div class="floating-item"><i class="fas fa-sparkles"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <h2 class="section-title">Our Premium Collections</h2>
+            <div class="collections-grid">
+                <div class="collection-card" data-collection="skincare">
+                    <div class="collection-image">
+                        <i class="fas fa-leaf"></i>
+                        <div class="collection-overlay">
+                            <button class="btn btn-white" onclick="filterProducts('skincare')">
+                                Explore Skincare
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Skincare Essentials</h3>
+                        <p>Nourish and rejuvenate your skin with our premium skincare collection</p>
+                        <div class="collection-stats">
+                            <span><i class="fas fa-box"></i> 24 Products</span>
+                            <span><i class="fas fa-star"></i> 4.8 Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collection-card" data-collection="makeup">
+                    <div class="collection-image">
+                        <i class="fas fa-palette"></i>
+                        <div class="collection-overlay">
+                            <button class="btn btn-white" onclick="filterProducts('makeup')">
+                                Explore Makeup
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Makeup Artistry</h3>
+                        <p>Express your creativity with our vibrant makeup collection</p>
+                        <div class="collection-stats">
+                            <span><i class="fas fa-box"></i> 36 Products</span>
+                            <span><i class="fas fa-star"></i> 4.9 Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collection-card" data-collection="perfumes">
+                    <div class="collection-image">
+                        <i class="fas fa-spray-can"></i>
+                        <div class="collection-overlay">
+                            <button class="btn btn-white" onclick="filterProducts('perfumes')">
+                                Explore Perfumes
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3>Signature Fragrances</h3>
+                        <p>Captivating scents that define your unique personality</p>
+                        <div class="collection-stats">
+                            <span><i class="fas fa-box"></i> 18 Products</span>
+                            <span><i class="fas fa-star"></i> 4.7 Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="skincare">Skincare</button>
+                    <button class="filter-btn" data-filter="makeup">Makeup</button>
+                    <button class="filter-btn" data-filter="perfumes">Perfumes</button>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Skincare Products -->
+                <div class="product-card" data-category="skincare">
+                    <div class="product-image">
+                        <i class="fas fa-tint"></i>
+                        <div class="product-badges">
+                            <span class="badge new">New</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" onclick="quickView(1)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" onclick="addToWishlist(1)">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Hydrating Serum</h3>
+                        <p class="product-category">Skincare</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(127)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$45.99</span>
+                            <span class="original-price">$59.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" onclick="addToCart(1)">
+                            <i class="fas fa-shopping-bag"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="skincare">
+                    <div class="product-image">
+                        <i class="fas fa-sun"></i>
+                        <div class="product-actions">
+                            <button class="action-btn" onclick="quickView(2)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" onclick="addToWishlist(2)">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Vitamin C Cream</h3>
+                        <p class="product-category">Skincare</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(89)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$38.50</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" onclick="addToCart(2)">
+                            <i class="fas fa-shopping-bag"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="skincare">
+                    <div class="product-image">
+                        <i class="fas fa-seedling"></i>
+                        <div class="product-badges">
+                            <span class="badge bestseller">Bestseller</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" onclick="quickView(3)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" onclick="addToWishlist(3)">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Gentle Cleanser</h3>
+                        <p class="product-category">Skincare</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(203)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$28.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" onclick="addToCart(3)">
+                            <i class="fas fa-shopping-bag"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Makeup Products -->
+                <div class="product-card" data-category="makeup">
+                    <div class="product-image">
+                        <i class="fas fa-paint-brush"></i>
+                        <div class="product-badges">
+                            <span class="badge limited">Limited</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" onclick="quickView(4)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" onclick="addToWishlist(4)">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Matte Lipstick Set</h3>
+                        <p class="product-category">Makeup</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(156)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$52.00</span>
+                            <span class="original-price">$68.00</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" onclick="addToCart(4)">
+                            <i class="fas fa-shopping-bag"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="makeup">
+                    <div class="product-image">
+                        <i class="fas fa-eye"></i>
+                        <div class="product-actions">
+                            <button class="action-btn" onclick="quickView(5)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" onclick="addToWishlist(5)">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Eyeshadow Palette</h3>
+                        <p class="product-category">Makeup</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(94)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$42.75</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" onclick="addToCart(5)">
+                            <i class="fas fa-shopping-bag"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="makeup">
+                    <div class="product-image">
+                        <i class="fas fa-magic"></i>
+                        <div class="product-badges">
+                            <span class="badge new">New</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" onclick="quickView(6)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" onclick="addToWishlist(6)">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Foundation Stick</h3>
+                        <p class="product-category">Makeup</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(78)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$35.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" onclick="addToCart(6)">
+                            <i class="fas fa-shopping-bag"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Perfume Products -->
+                <div class="product-card" data-category="perfumes">
+                    <div class="product-image">
+                        <i class="fas fa-spray-can"></i>
+                        <div class="product-badges">
+                            <span class="badge bestseller">Bestseller</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" onclick="quickView(7)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" onclick="addToWishlist(7)">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Midnight Essence</h3>
+                        <p class="product-category">Perfumes</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(245)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$89.99</span>
+                            <span class="original-price">$110.00</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" onclick="addToCart(7)">
+                            <i class="fas fa-shopping-bag"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="perfumes">
+                    <div class="product-image">
+                        <i class="fas fa-flower"></i>
+                        <div class="product-actions">
+                            <button class="action-btn" onclick="quickView(8)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" onclick="addToWishlist(8)">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Floral Dreams</h3>
+                        <p class="product-category">Perfumes</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(167)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$75.50</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" onclick="addToCart(8)">
+                            <i class="fas fa-shopping-bag"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="perfumes">
+                    <div class="product-image">
+                        <i class="fas fa-gem"></i>
+                        <div class="product-badges">
+                            <span class="badge premium">Premium</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" onclick="quickView(9)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn" onclick="addToWishlist(9)">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Diamond Luxe</h3>
+                        <p class="product-category">Perfumes</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(98)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$125.00</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" onclick="addToCart(9)">
+                            <i class="fas fa-shopping-bag"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About ADE'S Collection</h2>
+                    <p>Founded with a passion for beauty and self-expression, ADE'S Collection brings you the finest
+                        cosmetics from around the world. Our curated selection of skincare, makeup, and fragrances is
+                        designed to enhance your natural beauty and boost your confidence.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Premium Quality</h4>
+                                <p>Only the finest ingredients and formulations</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>Cruelty-Free</h4>
+                                <p>Ethically sourced and never tested on animals</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <div>
+                                <h4>Fast Delivery</h4>
+                                <p>Quick and secure shipping worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>10K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat">
+                        <h3>78</h3>
+                        <p>Premium Products</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4.8</h3>
+                        <p>Average Rating</p>
+                    </div>
+                    <div class="stat">
+                        <h3>3</h3>
+                        <p>Collections</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Our Store</h4>
+                            <p>123 Beauty Boulevard<br>Cosmetic City, CC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567<br>Mon-Fri 9AM-6PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@adescollection.com<br>support@adescollection.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <h3>Send us a Message</h3>
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-gem"></i>
+                        <span>ADE'S Collection</span>
+                    </div>
+                    <p>Discover your beauty with our premium cosmetics collection. Quality, elegance, and style in every
+                        product.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="#skincare">Skincare</a></li>
+                        <li><a href="#makeup">Makeup</a></li>
+                        <li><a href="#perfumes">Perfumes</a></li>
+                        <li><a href="#new-arrivals">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#size-guide">Size Guide</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for exclusive offers and beauty tips</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ADE'S Collection. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="btn btn-primary checkout-btn">
+                <i class="fas fa-credit-card"></i>
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-content">
+            <div class="search-header">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button class="close-search" id="closeSearch">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <p>Start typing to search products...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="ades-cosmetics.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olatunji Sarah Morenikeji - Frontend Developer Portfolio</title>
+    <link rel="stylesheet" href="olatunji-portfolio.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span>OSM</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Olatunji Sarah Morenikeji</h1>
+                <h2>Frontend Developer</h2>
+                <p>Crafting beautiful, responsive, and user-friendly web experiences with modern technologies and
+                    creative design solutions.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')">
+                        <i class="fas fa-code"></i>
+                        View My Work
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </button>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-circle">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-item"><i class="fab fa-html5"></i></div>
+                    <div class="floating-item"><i class="fab fa-css3-alt"></i></div>
+                    <div class="floating-item"><i class="fab fa-js-square"></i></div>
+                    <div class="floating-item"><i class="fab fa-react"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Olatunji Sarah Morenikeji, a passionate Frontend Developer with a keen eye for design
+                        and a love for creating exceptional digital experiences. I specialize in building responsive,
+                        accessible, and performant web applications using modern technologies.</p>
+                    <p>My journey in web development has led me to master various technologies and frameworks, allowing
+                        me to bring creative ideas to life through clean, efficient code. I believe in the power of good
+                        design and user experience to make a meaningful impact.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>3+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-photo">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend Technologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-paint-brush"></i> Design & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-universal-access"></i>
+                            <span>Accessibility</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Backend & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-npm"></i>
+                            <span>NPM</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Performance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web-apps">Web Apps</button>
+                <button class="filter-btn" data-filter="e-commerce">E-commerce</button>
+                <button class="filter-btn" data-filter="games">Games</button>
+                <button class="filter-btn" data-filter="tools">Tools</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Calculator Project -->
+                <div class="project-card" data-category="tools">
+                    <div class="project-image">
+                        <i class="fas fa-calculator"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="calculator.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Advanced Calculator</h3>
+                        <p>A fully functional calculator with modern UI design, supporting basic arithmetic operations
+                            with responsive layout.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weather App Project -->
+                <div class="project-card" data-category="web-apps">
+                    <div class="project-image">
+                        <i class="fas fa-cloud-sun"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="weather.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Dashboard</h3>
+                        <p>Real-time weather application with location search, current conditions, and forecast display
+                            with beautiful animations.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Generator Project -->
+                <div class="project-card" data-category="tools">
+                    <div class="project-image">
+                        <i class="fas fa-user-tie"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="portfolio-generator.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Generator</h3>
+                        <p>Dynamic portfolio generator that creates professional portfolios based on user input with
+                            customizable themes.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory Game Project -->
+                <div class="project-card" data-category="games">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="memory-game.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Memory Card Game</h3>
+                        <p>Interactive memory game with multiple difficulty levels, score tracking, and smooth
+                            animations built with pure JavaScript.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>CSS3</span>
+                            <span>HTML5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trendverse E-commerce Project -->
+                <div class="project-card" data-category="e-commerce">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-bag"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="trendverse.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Trendverse E-commerce</h3>
+                        <p>Modern e-commerce platform with product catalog, shopping cart, filtering, and responsive
+                            design for fashion retail.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>LocalStorage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daydream Tracker React App -->
+                <div class="project-card" data-category="web-apps">
+                    <div class="project-image">
+                        <i class="fas fa-clock"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="daydream-tracker/build/index.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Daydream Tracker</h3>
+                        <p>React-based time tracking app for monitoring daydreaming sessions with analytics, statistics,
+                            and data visualization.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Charts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Africana Swallow Restaurant -->
+                <div class="project-card" data-category="web-apps">
+                    <div class="project-image">
+                        <i class="fas fa-utensils"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="africana-swallow.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Africana Swallow Restaurant</h3>
+                        <p>African restaurant website with menu display, online ordering system, and reservation
+                            functionality with cultural design.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Catalog -->
+                <div class="project-card" data-category="web-apps">
+                    <div class="project-image">
+                        <i class="fas fa-music"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="music-catalog.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Music Streaming Catalog</h3>
+                        <p>Interactive music catalog with embedded audio players, playlist creation, and responsive
+                            design for music streaming.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>iFrames</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Todo List App -->
+                <div class="project-card" data-category="web-apps">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="todo-list.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Todo List Manager</h3>
+                        <p>Feature-rich todo application with task filtering, local storage, and beautiful gradient
+                            design with smooth animations.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>LocalStorage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hospital Website -->
+                <div class="project-card" data-category="web-apps">
+                    <div class="project-image">
+                        <i class="fas fa-hospital"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="hospital.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>MediCare Hospital</h3>
+                        <p>Comprehensive hospital website with appointment booking system, doctor profiles, and
+                            multi-step form validation.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Forms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADE'S Cosmetics -->
+                <div class="project-card" data-category="e-commerce">
+                    <div class="project-image">
+                        <i class="fas fa-gem"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="ades-cosmetics.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ADE'S Cosmetics Store</h3>
+                        <p>Premium cosmetics e-commerce site with product collections, shopping cart, search
+                            functionality, and elegant design.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>E-commerce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Validation System -->
+                <div class="project-card" data-category="tools">
+                    <div class="project-image">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="form-validation.html" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Advanced Form Validation</h3>
+                        <p>Comprehensive form validation system with real-time feedback, password strength meter, and
+                            error handling.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Validation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>olatunji.sarah@email.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+234 (0) 123 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send me a message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span>OSM</span>
+                    </div>
+                    <p>Frontend Developer passionate about creating beautiful, functional, and user-friendly web
+                        experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Responsive Design</a></li>
+                        <li><a href="#">Performance Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Let's Connect</h4>
+                    <p>Ready to work together? Let's discuss your next project!</p>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Olatunji Sarah Morenikeji. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="olatunji-portfolio.js"></script>
+</body>
+
+</html>

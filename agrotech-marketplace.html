@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech Marketplace - Farm Fresh Products</title>
+    <link rel="stylesheet" href="agrotech-marketplace.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav="#categories" class="nav-link">Categories</a></li>
+            <li><a href="#products" class="nav-link">Products</a></li>
+            <li><a href="#farmers" class="nav-link">For Farmers</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="profile-btn">
+                    <i class="fas fa-user"></i>
+                    Login
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Fresh from <span class="highlight">Farm to Table</span></h1>
+                <p>Connect directly with local farmers and enjoy the freshest organic produce delivered straight to your
+                    door. Support sustainable agriculture while nourishing your family.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('products')">
+                        <i class="fas fa-shopping-basket"></i>
+                        Shop Now
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('farmers')">
+                        <i class="fas fa-tractor"></i>
+                        Become a Seller
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="farm-illustration">
+                    <i class="fas fa-tractor"></i>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-item"><i class="fas fa-apple-alt"></i></div>
+                    <div class="floating-item"><i class="fas fa-carrot"></i></div>
+                    <div class="floating-item"><i class="fas fa-leaf"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="exploreCategory('vegetables')">
+                    <div class="category-icon">
+                        <i class="fas fa-carrot"></i>
+                    </div>
+                    <h3>Fresh Vegetables</h3>
+                    <p>Organic vegetables grown with care by local farmers</p>
+                    <span class="product-count">25+ Products</span>
+                </div>
+
+                <div class="category-card" onclick="exploreCategory('fruits')">
+                    <div class="category-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Seasonal Fruits</h3>
+                    <p>Sweet and juicy fruits picked at perfect ripeness</p>
+                    <span class="product-count">18+ Products</span>
+                </div>
+
+                <div class="category-card" onclick="exploreCategory('dairy')">
+                    <div class="category-icon">
+                        <i class="fas fa-glass-whiskey"></i>
+                    </div>
+                    <h3>Dairy Products</h3>
+                    <p>Fresh milk, eggs, and dairy from free-range farms</p>
+                    <span class="product-count">12+ Products</span>
+                </div>
+
+                <div class="category-card" onclick="exploreCategory('pantry')">
+                    <div class="category-icon">
+                        <i class="fas fa-jar"></i>
+                    </div>
+                    <h3>Pantry Essentials</h3>
+                    <p>Honey, grains, and preserved goods from local farms</p>
+                    <span class="product-count">15+ Products</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="vegetables">Vegetables</button>
+                    <button class="filter-btn" data-filter="fruits">Fruits</button>
+                    <button class="filter-btn" data-filter="dairy">Dairy</button>
+                    <button class="filter-btn" data-filter="pantry">Pantry</button>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Farmer Dashboard Section -->
+    <section id="farmers" class="farmer-dashboard">
+        <div class="container">
+            <div class="dashboard-content">
+                <div class="dashboard-text">
+                    <h2>Join Our Farming Community</h2>
+                    <p>Become part of our growing network of local farmers and reach customers who value fresh,
+                        sustainable produce. Our platform makes it easy to showcase your products and manage your sales.
+                    </p>
+                    <div class="dashboard-features">
+                        <div class="feature">
+                            <i class="fas fa-store"></i>
+                            <span>Create your own digital storefront</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Track sales and manage inventory</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-truck"></i>
+                            <span>Integrated delivery management</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <span>Direct customer relationships</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Competitive pricing and fair payments</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Start Selling Today
+                    </button>
+                </div>
+                <div class="dashboard-image">
+                    <div class="dashboard-illustration">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>123 Farm Valley Road<br>Agricultural District, AD 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-FARM<br>Customer Support</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@agrotechmarket.com<br>support@agrotechmarket.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>AgroTech Marketplace</span>
+                    </div>
+                    <p>Connecting farmers and consumers for a sustainable future. Fresh, organic, and locally sourced
+                        products delivered with care.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#vegetables">Fresh Vegetables</a></li>
+                        <li><a href="#fruits">Seasonal Fruits</a></li>
+                        <li><a href="#dairy">Dairy Products</a></li>
+                        <li><a href="#pantry">Pantry Essentials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>For Farmers</h4>
+                    <ul>
+                        <li><a href="#sell">Start Selling</a></li>
+                        <li><a href="#dashboard">Farmer Dashboard</a></li>
+                        <li><a href="#pricing">Pricing Plans</a></li>
+                        <li><a href="#support">Farmer Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get the latest updates on fresh products and seasonal offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroTech Marketplace. All rights reserved. | Supporting sustainable agriculture.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="btn btn-primary checkout-btn">
+                <i class="fas fa-credit-card"></i>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <script src="agrotech-marketplace.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+body{
+    background-color:rgb(141, 140, 135);
+}
+.a{
+text-color:brown;
+}
+.a:visited{
+    color:pink;
+}
+.a:link{
+    color:rgb(23, 144, 224);
+}
+.a:hover{
+    color:orange;
+}
+.a:focused{
+    color:yellow;
+}
+.a:active{
+    color:green;
+}
+.ul{
+    background-color: rgba(194, 160, 160, 0.956);
+}
+input[type="checkbox"]:checked{
+   accent-color:greenyellow;
+}
+label{
+    font-weight:bold;
+    color:blue;
+}
+input[type="checkbox"]:checked + label{
+    color:greenyellow;
+}

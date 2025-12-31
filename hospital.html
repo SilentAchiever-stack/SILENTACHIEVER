@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hospital - Book Your Appointment</title>
+    <link rel="stylesheet" href="hospital.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-hospital"></i>
+                    <span>MediCare Hospital</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="#appointment" class="nav-link">Book Appointment</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Health, Our Priority</h1>
+            <p>Experience world-class healthcare with our team of expert doctors and state-of-the-art facilities</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('appointment')">
+                    <i class="fas fa-calendar-plus"></i>
+                    Book Appointment
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('services')">
+                    <i class="fas fa-stethoscope"></i>
+                    Our Services
+                </button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <i class="fas fa-user-md"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Medical Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Cardiology</h3>
+                    <p>Comprehensive heart care with advanced diagnostic and treatment options</p>
+                    <div class="service-price">From $150</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Neurology</h3>
+                    <p>Expert neurological care for brain and nervous system disorders</p>
+                    <div class="service-price">From $200</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Orthopedics</h3>
+                    <p>Specialized care for bones, joints, and musculoskeletal system</p>
+                    <div class="service-price">From $120</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Ophthalmology</h3>
+                    <p>Complete eye care services from routine exams to complex surgeries</p>
+                    <div class="service-price">From $100</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Pediatrics</h3>
+                    <p>Specialized healthcare for infants, children, and adolescents</p>
+                    <div class="service-price">From $80</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3>General Medicine</h3>
+                    <p>Primary healthcare services for adults and routine medical care</p>
+                    <div class="service-price">From $75</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <h2 class="section-title">Meet Our Expert Doctors</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p class="specialty">Cardiologist</p>
+                        <p class="experience">15+ years experience</p>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Michael Chen</h3>
+                        <p class="specialty">Neurologist</p>
+                        <p class="experience">12+ years experience</p>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.8/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Emily Rodriguez</h3>
+                        <p class="specialty">Orthopedic Surgeon</p>
+                        <p class="experience">18+ years experience</p>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Section -->
+    <section id="appointment" class="appointment">
+        <div class="container">
+            <h2 class="section-title">Book Your Appointment</h2>
+            <div class="appointment-container">
+                <div class="appointment-form-wrapper">
+                    <form id="appointmentForm" class="appointment-form">
+                        <div class="form-step active" id="step1">
+                            <h3><i class="fas fa-user"></i> Patient Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="dateOfBirth">Date of Birth *</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender *</label>
+                                    <select id="gender" name="gender" required>
+                                        <option value="">Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea id="address" name="address" rows="3"
+                                    placeholder="Enter your full address"></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary" onclick="nextStep()">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-step" id="step2">
+                            <h3><i class="fas fa-stethoscope"></i> Appointment Details</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="department">Department *</label>
+                                    <select id="department" name="department" required onchange="updateDoctors()">
+                                        <option value="">Select Department</option>
+                                        <option value="cardiology">Cardiology</option>
+                                        <option value="neurology">Neurology</option>
+                                        <option value="orthopedics">Orthopedics</option>
+                                        <option value="ophthalmology">Ophthalmology</option>
+                                        <option value="pediatrics">Pediatrics</option>
+                                        <option value="general">General Medicine</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="doctor">Preferred Doctor *</label>
+                                    <select id="doctor" name="doctor" required onchange="updatePrice()">
+                                        <option value="">Select Doctor</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="appointmentDate">Appointment Date *</label>
+                                    <input type="date" id="appointmentDate" name="appointmentDate" required
+                                        onchange="updateTimeSlots()">
+                                </div>
+                                <div class="form-group">
+                                    <label for="appointmentTime">Appointment Time *</label>
+                                    <select id="appointmentTime" name="appointmentTime" required>
+                                        <option value="">Select Time</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="symptoms">Symptoms/Reason for Visit</label>
+                                <textarea id="symptoms" name="symptoms" rows="4"
+                                    placeholder="Please describe your symptoms or reason for the visit"></textarea>
+                            </div>
+                            <div class="appointment-summary">
+                                <h4>Appointment Summary</h4>
+                                <div class="summary-item">
+                                    <span>Department:</span>
+                                    <span id="summaryDepartment">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Doctor:</span>
+                                    <span id="summaryDoctor">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Date & Time:</span>
+                                    <span id="summaryDateTime">-</span>
+                                </div>
+                                <div class="summary-item total">
+                                    <span>Consultation Fee:</span>
+                                    <span id="summaryPrice">$0</span>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" onclick="prevStep()">
+                                    <i class="fas fa-arrow-left"></i> Previous
+                                </button>
+                                <button type="button" class="btn btn-primary" onclick="nextStep()">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-step" id="step3">
+                            <h3><i class="fas fa-credit-card"></i> Payment Information</h3>
+                            <div class="payment-methods">
+                                <h4>Select Payment Method</h4>
+                                <div class="payment-options">
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="card" checked>
+                                        <div class="payment-card">
+                                            <i class="fas fa-credit-card"></i>
+                                            <span>Credit/Debit Card</span>
+                                        </div>
+                                    </label>
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="paypal">
+                                        <div class="payment-card">
+                                            <i class="fab fa-paypal"></i>
+                                            <span>PayPal</span>
+                                        </div>
+                                    </label>
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="insurance">
+                                        <div class="payment-card">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <span>Insurance</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="payment-details" id="cardPayment">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Card Number *</label>
+                                        <input type="text" id="cardNumber" name="cardNumber"
+                                            placeholder="1234 5678 9012 3456" maxlength="19">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardName">Cardholder Name *</label>
+                                        <input type="text" id="cardName" name="cardName" placeholder="John Doe">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Expiry Date *</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY"
+                                            maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="payment-details" id="paypalPayment" style="display: none;">
+                                <div class="paypal-info">
+                                    <i class="fab fa-paypal"></i>
+                                    <p>You will be redirected to PayPal to complete your payment securely.</p>
+                                </div>
+                            </div>
+
+                            <div class="payment-details" id="insurancePayment" style="display: none;">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="insuranceProvider">Insurance Provider *</label>
+                                        <select id="insuranceProvider" name="insuranceProvider">
+                                            <option value="">Select Provider</option>
+                                            <option value="aetna">Aetna</option>
+                                            <option value="bluecross">Blue Cross Blue Shield</option>
+                                            <option value="cigna">Cigna</option>
+                                            <option value="humana">Humana</option>
+                                            <option value="united">United Healthcare</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="policyNumber">Policy Number *</label>
+                                        <input type="text" id="policyNumber" name="policyNumber"
+                                            placeholder="Enter policy number">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="groupNumber">Group Number</label>
+                                    <input type="text" id="groupNumber" name="groupNumber"
+                                        placeholder="Enter group number">
+                                </div>
+                            </div>
+
+                            <div class="final-summary">
+                                <h4>Final Summary</h4>
+                                <div class="summary-details">
+                                    <div class="summary-item">
+                                        <span>Patient:</span>
+                                        <span id="finalPatientName">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span>Department:</span>
+                                        <span id="finalDepartment">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span>Doctor:</span>
+                                        <span id="finalDoctor">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span>Date & Time:</span>
+                                        <span id="finalDateTime">-</span>
+                                    </div>
+                                    <div class="summary-item total">
+                                        <span>Total Amount:</span>
+                                        <span id="finalPrice">$0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" onclick="prevStep()">
+                                    <i class="fas fa-arrow-left"></i> Previous
+                                </button>
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fas fa-check"></i> Confirm & Pay
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="appointment-info">
+                    <div class="info-card">
+                        <h4><i class="fas fa-clock"></i> Working Hours</h4>
+                        <div class="hours-list">
+                            <div class="hour-item">
+                                <span>Monday - Friday</span>
+                                <span>8:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>Saturday</span>
+                                <span>9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>Sunday</span>
+                                <span>10:00 AM - 4:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="fas fa-phone"></i> Emergency Contact</h4>
+                        <div class="contact-info">
+                            <p><strong>Emergency:</strong> 911</p>
+                            <p><strong>Hospital:</strong> (555) 123-4567</p>
+                            <p><strong>Appointments:</strong> (555) 123-4568</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="fas fa-info-circle"></i> Important Notes</h4>
+                        <ul class="notes-list">
+                            <li>Please arrive 15 minutes before your appointment</li>
+                            <li>Bring a valid ID and insurance card</li>
+                            <li>Cancellations must be made 24 hours in advance</li>
+                            <li>Payment is due at the time of service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Medical Center Drive<br>Healthcare City, HC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>Main: (555) 123-4567<br>Emergency: 911</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@medicarehospital.com<br>appointments@medicarehospital.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-hospital"></i>
+                        <span>MediCare Hospital</span>
+                    </div>
+                    <p>Providing exceptional healthcare services with compassion and excellence since 1985.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#appointment">Appointments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Surgery</a></li>
+                        <li><a href="#">Laboratory</a></li>
+                        <li><a href="#">Radiology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h2>Appointment Confirmed!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Your appointment has been successfully booked and payment processed.</p>
+                <div class="appointment-details" id="confirmedDetails">
+                    <!-- Appointment details will be inserted here -->
+                </div>
+                <p class="confirmation-note">
+                    <i class="fas fa-info-circle"></i>
+                    A confirmation email has been sent to your registered email address.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="closeModal()">
+                    <i class="fas fa-check"></i> Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="hospital.js"></script>
+</body>
+
+</html>

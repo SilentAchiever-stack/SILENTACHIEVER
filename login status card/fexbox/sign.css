@@ -1,0 +1,40 @@
+main{
+    font-size: 20px;
+    text-align: center;
+    border:2px solid black;
+    border-radius:20px;
+background: linear-gradient(1500deg, rgb(99, 2, 254), rgba(255, 166, 0, 0.776), rgba(255, 255, 0, 0.724), rgba(248, 11, 50, 0.605));
+}
+
+#email{
+           font-size: 10pxpx;
+             font-weight: bold;
+            margin: 20px;
+            border-radius: 2px;
+            border-top:12px;
+            width: 200px;
+            margin-bottom:20px;
+  }
+  #password{
+    font-size: 10pxpx;
+        font-weight: bold;
+        margin: 20px;
+        border-radius: 2px;
+        border-top: 12px;
+        width: 200px;
+    }
+                #email,
+                #password:hover {
+                    background: linear-gradient(135deg, rgb(6, 252, 6), orange, yellow);
+                    border: 2px solid yellow;
+                }
+  .submit {
+      background:linear-gradient(1500deg, rgb(99, 2, 254), rgba(255, 166, 0, 0.776), rgba(255, 255, 0, 0.724), rgba(248, 11, 50, 0.605));
+      color: black;
+      border-radius: 5px;
+      font-size: 19px;
+     width:200px;
+  }
+  p a{
+    text-decoration: none;
+  }

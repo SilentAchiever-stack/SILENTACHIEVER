@@ -1,0 +1,51 @@
+🎯 Key Features
+Timer System:
+
+Real-time session tracking with visual timer
+Session types (daydreaming, fantasy, rumination, planning)
+Trigger tracking and notes
+Daily progress monitoring against goals
+Analytics Dashboard:
+
+Comprehensive statistics with time range filters
+Session type breakdowns with visual charts
+Common trigger identification
+Hourly pattern analysis
+Goal progress tracking
+Session Management:
+
+Complete history with search and filtering
+Sessions grouped by date with totals
+Delete and manage individual sessions
+Export/import data for backup
+Settings & Customization:
+
+Adjustable daily goals
+Data export/import functionality
+Privacy-focused local storage
+Reset and clear options
+🎨 Design Highlights
+Linear Gradient Background: Exactly as requested - yellow (#ffeb3b) → red (#ff5722) → green (#4caf50)
+Glassmorphism UI: Modern frosted glass effect cards
+Responsive Design: Works perfectly on all devices
+Smooth Animations: Engaging transitions and hover effects
+Intuitive Navigation: Clean tabbed interface
+🚀 To Run the App
+cd daydream-tracker
+npm install
+npm start
+The app will open at http://localhost:3000
+
+📱 Core Functionality
+Start Timer → Track sessions in real-time
+View History → See all past sessions with filtering
+Analyze Statistics → Understand patterns and progress
+Manage Settings → Customize goals and export data
+The app stores all data locally for privacy and includes comprehensive export/import features for data portability. The beautiful gradient background creates a calming, therapeutic atmosphere perfect for a mental health tracking tool.
+
+Credits used: 4.82
+Elapsed time: 7m 15s
+
+
+
+15 changes acce

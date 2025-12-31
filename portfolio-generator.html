@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Generator</title>
+    <link rel="stylesheet" href="portfolio-generator.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="generator-section" id="generatorSection">
+            <div class="header">
+                <h1><i class="fas fa-magic"></i> Portfolio Generator</h1>
+                <p>Create your professional portfolio in minutes</p>
+            </div>
+
+            <form id="portfolioForm" class="form-container">
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h3><i class="fas fa-user"></i> Personal Information</h3>
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Professional Title *</label>
+                        <input type="text" id="title" placeholder="e.g., Full Stack Developer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Bio/About Me *</label>
+                        <textarea id="bio" rows="4" placeholder="Tell us about yourself..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="profileImage">Profile Image URL</label>
+                        <input type="url" id="profileImage" placeholder="https://example.com/your-photo.jpg">
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="form-section">
+                    <h3><i class="fas fa-envelope"></i> Contact Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="City, Country">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website</label>
+                            <input type="url" id="website" placeholder="https://yourwebsite.com">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="form-section">
+                    <h3><i class="fab fa-github"></i> Social Links</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="github">GitHub</label>
+                            <input type="url" id="github" placeholder="https://github.com/username">
+                        </div>
+                        <div class="form-group">
+                            <label for="linkedin">LinkedIn</label>
+                            <input type="url" id="linkedin" placeholder="https://linkedin.com/in/username">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="twitter">Twitter</label>
+                            <input type="url" id="twitter" placeholder="https://twitter.com/username">
+                        </div>
+                        <div class="form-group">
+                            <label for="portfolio">Portfolio URL</label>
+                            <input type="url" id="portfolio" placeholder="https://yourportfolio.com">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-section">
+                    <h3><i class="fas fa-code"></i> Skills</h3>
+                    <div class="form-group">
+                        <label for="skills">Skills (comma-separated)</label>
+                        <input type="text" id="skills" placeholder="JavaScript, React, Node.js, Python, CSS">
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="form-section">
+                    <h3><i class="fas fa-project-diagram"></i> Projects</h3>
+                    <div id="projectsContainer">
+                        <div class="project-item">
+                            <div class="form-group">
+                                <label>Project Name</label>
+                                <input type="text" class="project-name" placeholder="Project Title">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea class="project-description" rows="2"
+                                    placeholder="Brief project description"></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Live Demo URL</label>
+                                    <input type="url" class="project-demo" placeholder="https://demo-link.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>GitHub URL</label>
+                                    <input type="url" class="project-github" placeholder="https://github.com/user/repo">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Technologies Used</label>
+                                <input type="text" class="project-tech" placeholder="React, Node.js, MongoDB">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="addProject" class="add-btn">
+                        <i class="fas fa-plus"></i> Add Another Project
+                    </button>
+                </div>
+
+                <!-- Experience -->
+                <div class="form-section">
+                    <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                    <div id="experienceContainer">
+                        <div class="experience-item">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Job Title</label>
+                                    <input type="text" class="job-title" placeholder="Software Developer">
+                                </div>
+                                <div class="form-group">
+                                    <label>Company</label>
+                                    <input type="text" class="job-company" placeholder="Company Name">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Start Date</label>
+                                    <input type="text" class="job-start" placeholder="Jan 2022">
+                                </div>
+                                <div class="form-group">
+                                    <label>End Date</label>
+                                    <input type="text" class="job-end" placeholder="Present">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea class="job-description" rows="2"
+                                    placeholder="Job responsibilities and achievements"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="addExperience" class="add-btn">
+                        <i class="fas fa-plus"></i> Add Another Experience
+                    </button>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="generate-btn">
+                        <i class="fas fa-magic"></i> Generate Portfolio
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Portfolio Preview -->
+        <div class="portfolio-section" id="portfolioSection" style="display: none;">
+            <div class="portfolio-header">
+                <button id="backToForm" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Form
+                </button>
+                <button id="downloadPortfolio" class="download-btn">
+                    <i class="fas fa-download"></i> Download HTML
+                </button>
+            </div>
+            <div id="portfolioPreview"></div>
+        </div>
+    </div>
+
+    <script src="portfolio-generator.js"></script>
+</body>
+
+</html>

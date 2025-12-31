@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - Frontend Developer | Aspiring DevOps Engineer</title>
+    <link rel="stylesheet" href="dev-portfolio.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">Alex Chen</span>
+                <span class="brand-subtitle">Frontend → DevOps</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Frontend Developer</span>
+                        <span class="title-transition">Transitioning to</span>
+                        <span class="title-line gradient-text">DevOps Engineer</span>
+                    </h1>
+                    <p class="hero-description">
+                        Passionate about creating seamless user experiences and building robust, scalable
+                        infrastructure.
+                        Currently expanding my expertise from frontend development to full-stack DevOps engineering.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i>
+                            View Projects
+                        </a>
+                        <a href="#journey" class="btn btn-secondary">
+                            <i class="fas fa-route"></i>
+                            My Journey
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-animation">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-buttons">
+                                    <span class="btn-close"></span>
+                                    <span class="btn-minimize"></span>
+                                    <span class="btn-maximize"></span>
+                                </div>
+                                <span class="terminal-title">alex@devops-journey</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command" id="typingText"></span>
+                                    <span class="cursor">|</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">From pixels to pipelines</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>Current Role</h3>
+                        <p>
+                            As a Frontend Developer with 3+ years of experience, I specialize in creating
+                            responsive, accessible web applications using modern JavaScript frameworks.
+                            I'm passionate about clean code, user experience, and performance optimization.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <h3>The Transition</h3>
+                        <p>
+                            I'm actively transitioning into DevOps engineering to bridge the gap between
+                            development and operations. My goal is to become a full-stack DevOps engineer
+                            who can build, deploy, and maintain scalable applications end-to-end.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <h3>What Drives Me</h3>
+                        <p>
+                            I believe in continuous learning and automation. My frontend background gives me
+                            a unique perspective on user-centric infrastructure design, while my growing
+                            DevOps skills enable me to build more reliable and scalable systems.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Frontend</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">DevOps Tools Learning</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Certifications Pursuing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Current expertise and learning path</p>
+            </div>
+            <div class="skills-content">
+                <!-- Frontend Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-laptop-code"></i>
+                        Frontend Development
+                        <span class="proficiency expert">Expert</span>
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item expert">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript (ES6+)</span>
+                            <div class="skill-level">95%</div>
+                        </div>
+                        <div class="skill-item expert">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                            <div class="skill-level">90%</div>
+                        </div>
+                        <div class="skill-item expert">
+                            <i class="fab fa-vue"></i>
+                            <span>Vue.js</span>
+                            <div class="skill-level">85%</div>
+                        </div>
+                        <div class="skill-item expert">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3/SCSS</span>
+                            <div class="skill-level">92%</div>
+                        </div>
+                        <div class="skill-item expert">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            <div class="skill-level">95%</div>
+                        </div>
+                        <div class="skill-item intermediate">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                            <div class="skill-level">75%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend & Database -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Backend & Database
+                        <span class="proficiency intermediate">Learning</span>
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item intermediate">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="skill-level">70%</div>
+                        </div>
+                        <div class="skill-item beginner">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                            <div class="skill-level">60%</div>
+                        </div>
+                        <div class="skill-item beginner">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                            <div class="skill-level">55%</div>
+                        </div>
+                        <div class="skill-item intermediate">
+                            <i class="fas fa-fire"></i>
+                            <span>Express.js</span>
+                            <div class="skill-level">65%</div>
+                        </div>
+                        <div class="skill-item beginner">
+                            <i class="fas fa-gem"></i>
+                            <span>Redis</span>
+                            <div class="skill-level">45%</div>
+                        </div>
+                        <div class="skill-item intermediate">
+                            <i class="fas fa-code-branch"></i>
+                            <span>REST APIs</span>
+                            <div class="skill-level">75%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps & Cloud -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-cloud"></i>
+                        DevOps & Cloud
+                        <span class="proficiency beginner">Actively Learning</span>
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item intermediate">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                            <div class="skill-level">65%</div>
+                        </div>
+                        <div class="skill-item beginner">
+                            <i class="fas fa-dharmachakra"></i>
+                            <span>Kubernetes</span>
+                            <div class="skill-level">40%</div>
+                        </div>
+                        <div class="skill-item intermediate">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                            <div class="skill-level">55%</div>
+                        </div>
+                        <div class="skill-item intermediate">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git/GitHub Actions</span>
+                            <div class="skill-level">80%</div>
+                        </div>
+                        <div class="skill-item beginner">
+                            <i class="fas fa-infinity"></i>
+                            <span>Jenkins</span>
+                            <div class="skill-level">35%</div>
+                        </div>
+                        <div class="skill-item beginner">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Monitoring (Grafana)</span>
+                            <div class="skill-level">30%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Tools & Others
+                        <span class="proficiency intermediate">Proficient</span>
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item expert">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                            <div class="skill-level">90%</div>
+                        </div>
+                        <div class="skill-item expert">
+                            <i class="fas fa-terminal"></i>
+                            <span>Linux/Bash</span>
+                            <div class="skill-level">80%</div>
+                        </div>
+                        <div class="skill-item intermediate">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                            <div class="skill-level">95%</div>
+                        </div>
+                        <div class="skill-item intermediate">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                            <div class="skill-level">75%</div>
+                        </div>
+                        <div class="skill-item beginner">
+                            <i class="fas fa-cube"></i>
+                            <span>Terraform</span>
+                            <div class="skill-level">25%</div>
+                        </div>
+                        <div class="skill-item beginner">
+                            <i class="fas fa-robot"></i>
+                            <span>Ansible</span>
+                            <div class="skill-level">20%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">From frontend apps to DevOps experiments</p>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey" id="journey">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My DevOps Journey</h2>
+                <p class="section-subtitle">Learning path and milestones</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Frontend Mastery</h3>
+                        <span class="timeline-date">2021 - 2024</span>
+                        <p>Built 15+ production applications using React, Vue.js, and modern JavaScript. Mastered
+                            responsive design, performance optimization, and accessibility.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item current">
+                    <div class="timeline-marker">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Backend Development</h3>
+                        <span class="timeline-date">2024 - Present</span>
+                        <p>Learning server-side development with Node.js, Python, and database management. Building
+                            RESTful APIs and understanding system architecture.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item current">
+                    <div class="timeline-marker">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>DevOps Fundamentals</h3>
+                        <span class="timeline-date">2024 - Present</span>
+                        <p>Diving into containerization with Docker, CI/CD pipelines, and cloud platforms. Setting up
+                            automated deployment workflows and monitoring systems.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item future">
+                    <div class="timeline-marker">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Cloud & Orchestration</h3>
+                        <span class="timeline-date">2024 - 2025</span>
+                        <p>Planning to master Kubernetes, advanced AWS services, and infrastructure as code. Goal:
+                            Deploy and manage scalable microservices architectures.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Terraform</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item future">
+                    <div class="timeline-marker">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Full-Stack DevOps Engineer</h3>
+                        <span class="timeline-date">2025 Goal</span>
+                        <p>Become a complete full-stack DevOps engineer capable of designing, building, deploying, and
+                            maintaining enterprise-level applications with robust CI/CD pipelines.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Full-Stack</span>
+                            <span class="skill-tag">DevOps</span>
+                            <span class="skill-tag">Leadership</span>
+                            <span class="skill-tag">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Open to opportunities and collaborations</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>alex.chen.dev@email.com</p>
+                        <a href="mailto:alex.chen.dev@email.com" class="contact-link">Send Message</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect professionally</p>
+                        <a href="#" class="contact-link">View Profile</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>Check out my code</p>
+                        <a href="#" class="contact-link">View Repositories</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Alex Chen. Building the bridge between frontend and DevOps.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage">Message sent successfully!</span>
+        </div>
+    </div>
+
+    <script src="dev-portfolio.js"></script>
+</body>
+
+</html>

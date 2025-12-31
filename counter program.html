@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color:rgb(22, 1, 37);
+                background-repeat: no-repeat;
+                
+            }
+            #countlabel{
+                 display: block;
+                 text-align: center; 
+                 font-size:9em;
+                 font-family: Helvetica;
+                 background:linear-gradient(200deg,rgb(203, 251, 73),hsl(300, 15%, 50%),hsl(197, 98%, 29%));
+                 height:200%;
+                 border-radius: 20px;
+                 color:hsl(240, 90%, 70%);
+            }
+            #buttoncontainer{
+                text-align:center;
+                margin:20px;
+               border-radius: 20px; 
+               background:linear-gradient(200deg,rgb(203, 251, 73),hsl(300, 15%, 50%),hsl(197, 98%, 29%));;
+            }
+           
+            .button{
+                background:linear-gradient(200deg,rgb(203, 251, 73),hsl(300, 15%, 50%),hsl(197, 98%, 29%));;
+                transition:background-color:0.25;
+                cursor:pointer;
+                border:none;
+                padding:6px;
+                color:blue;
+                font-size:16px;
+                
+
+            }
+            .button:hover{
+                background-color: rgb(81, 50, 205);
+            }
+        </style>
+    </head>
+    <body>
+        <label id="countlabel">0</label>
+        <div id="buttoncontainer">
+            <button id="decreaseBtn" class="button">decrease</button>
+            <button id="resetBtn" class="button">reset</button>
+            <button id="increaseBtn" class="button">increase</button>
+        </div>
+     </body>
+     <script>
+        const decreaseBtn = document.getElementById("decreaseBtn");
+        const resetBtn = document.getElementById("resetBtn");
+        const increaseBtn = document.getElementById("increaseBtn");
+        const countlabel = document.getElementById("countlabel");
+ let count = 0;
+    
+ increaseBtn.onclick = function(){
+        count++;
+        countlabel.textContent = count;
+ }
+     decreaseBtn.onclick = function () {
+            count--;
+            countlabel.textContent = count;
+        }
+         resetBtn.onclick = function () {
+                count = 0;
+                countlabel.textContent = 0;
+            }
+        
+
+     </script>
+</html>

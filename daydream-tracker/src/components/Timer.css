@@ -1,0 +1,227 @@
+.timer-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.timer-card {
+    text-align: center;
+}
+
+.timer-display {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.time-circle {
+    width: 250px;
+    height: 250px;
+    border: 8px solid #4caf50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.time-circle::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    z-index: -1;
+}
+
+.time-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4caf50;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timer-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.timer-btn {
+    min-width: 140px;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.session-details {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.daily-progress-card {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.daily-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 87, 34, 0.1);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 87, 34, 0.2);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #7f8c8d;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.progress-section {
+    margin-top: 1.5rem;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.goal-exceeded {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(244, 67, 54, 0.1);
+    border: 2px solid rgba(244, 67, 54, 0.2);
+    border-radius: 10px;
+    color: #f44336;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.session-info-card {
+    background: rgba(255, 193, 7, 0.1);
+    border: 2px solid rgba(255, 193, 7, 0.3);
+}
+
+.current-session-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.session-detail {
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border-left: 4px solid #ff5722;
+}
+
+.session-detail strong {
+    color: #2c3e50;
+    margin-right: 0.5rem;
+}
+
+/* Animations */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.time-circle.running {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timer-container {
+        gap: 1.5rem;
+    }
+
+    .time-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .time-text {
+        font-size: 2.5rem;
+    }
+
+    .timer-controls {
+        gap: 0.5rem;
+    }
+
+    .timer-btn {
+        min-width: 120px;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    .daily-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .time-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .time-text {
+        font-size: 2rem;
+    }
+
+    .timer-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timer-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}

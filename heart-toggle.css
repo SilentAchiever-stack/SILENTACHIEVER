@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.demo-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.demo-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.demo-section p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+/* Hearts Grid */
+.hearts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.heart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.heart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.heart-label {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Base Heart Button */
+.heart-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-size: 2rem;
+    color: #ccc;
+}
+
+.heart-btn:hover {
+    background: rgba(255, 107, 107, 0.1);
+    transform: scale(1.05);
+}
+
+.heart-btn:active {
+    transform: scale(0.95);
+}
+
+/* Heart Icons */
+.heart-icon,
+.heart-icon-filled {
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heart-icon-filled {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    color: #ff6b6b;
+}
+
+/* Liked State */
+.heart-btn.liked .heart-icon {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.heart-btn.liked .heart-icon-filled {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Heart with Counter */
+.heart-with-counter {
+    flex-direction: row;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #eee;
+}
+
+.heart-with-counter.liked {
+    background: rgba(255, 107, 107, 0.1);
+    border-color: #ff6b6b;
+}
+
+.heart-count {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    margin-left: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.heart-with-counter.liked .heart-count {
+    color: #ff6b6b;
+}
+
+/* Animated Heart */
+.heart-animated.liked .heart-icon-filled {
+    animation: heartBeat 0.6s ease;
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    25% {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    75% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Pulse Heart */
+.heart-pulse.liked .heart-icon-filled {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Gradient Heart */
+.heart-gradient .heart-icon-filled {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e, #ffa8a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Large Heart */
+.heart-large {
+    font-size: 3rem;
+    padding: 1.5rem;
+}
+
+/* Heart with Text */
+.heart-with-text {
+    flex-direction: row;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #eee;
+    font-size: 1.5rem;
+}
+
+.heart-with-text.liked {
+    background: rgba(255, 107, 107, 0.1);
+    border-color: #ff6b6b;
+}
+
+.heart-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+.heart-with-text.liked .heart-text {
+    color: #ff6b6b;
+}
+
+.heart-with-text.liked .heart-text::after {
+    content: 'd';
+}
+
+/* Bouncy Heart */
+.heart-bouncy.liked {
+    animation: bounce 0.8s ease;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    60%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    40% {
+        transform: translateY(-20px) scale(1.1);
+    }
+
+    80% {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+/* Status Section */
+.status-section {
+    margin-bottom: 3rem;
+}
+
+.status-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.status-item.liked {
+    background: rgba(255, 107, 107, 0.1);
+    border-left: 4px solid #ff6b6b;
+}
+
+.status-name {
+    font-weight: 600;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.status-indicator.liked {
+    color: #ff6b6b;
+}
+
+.status-indicator.unliked {
+    color: #ccc;
+}
+
+/* Controls Section */
+.controls-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.control-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.control-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    transform: translateX(400px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Floating Hearts Animation */
+.floating-heart {
+    position: absolute;
+    color: #ff6b6b;
+    font-size: 1rem;
+    pointer-events: none;
+    animation: floatUp 2s ease-out forwards;
+    z-index: 100;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.5);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .demo-section {
+        padding: 2rem;
+    }
+
+    .demo-section h1 {
+        font-size: 2rem;
+    }
+
+    .hearts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .heart-container {
+        padding: 1.5rem;
+    }
+
+    .heart-btn {
+        font-size: 1.5rem;
+    }
+
+    .heart-large {
+        font-size: 2rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .control-btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .demo-section {
+        padding: 1.5rem;
+    }
+
+    .hearts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toast {
+        right: 10px;
+        left: 10px;
+        transform: translateY(-100px);
+    }
+
+    .toast.show {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundWave - Music Catalog</title>
+    <link rel="stylesheet" href="music-catalog.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1><i class="fas fa-music"></i> SoundWave</h1>
+                <p class="tagline">Your Music Universe</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#catalog" class="nav-link">Catalog</a>
+                <a href="#playlists" class="nav-link">Playlists</a>
+                <a href="#genres" class="nav-link">Genres</a>
+                <a href="#artists" class="nav-link">Artists</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search songs, artists...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="favorites-btn" id="favoritesBtn">
+                    <i class="fas fa-heart"></i>
+                    <span class="favorites-count" id="favoritesCount">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Discover Amazing Music</h2>
+            <p>Stream millions of songs from your favorite artists and discover new ones</p>
+            <div class="hero-buttons">
+                <button class="cta-btn primary" onclick="scrollToSection('catalog')">
+                    <i class="fas fa-play"></i>
+                    Start Listening
+                </button>
+                <button class="cta-btn secondary" onclick="scrollToSection('playlists')">
+                    <i class="fas fa-list"></i>
+                    Browse Playlists
+                </button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="music-waves">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <h2 class="section-title">Featured This Week</h2>
+            <div class="featured-grid" id="featuredGrid">
+                <!-- Featured content will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Genres Section -->
+    <section class="genres" id="genres">
+        <div class="container">
+            <h2 class="section-title">Browse by Genre</h2>
+            <div class="genres-grid">
+                <div class="genre-card" data-genre="pop">
+                    <div class="genre-icon">🎵</div>
+                    <h3>Pop</h3>
+                    <p>Chart-topping hits</p>
+                </div>
+                <div class="genre-card" data-genre="rock">
+                    <div class="genre-icon">🎸</div>
+                    <h3>Rock</h3>
+                    <p>Classic & modern rock</p>
+                </div>
+                <div class="genre-card" data-genre="hip-hop">
+                    <div class="genre-icon">🎤</div>
+                    <h3>Hip Hop</h3>
+                    <p>Beats & rhymes</p>
+                </div>
+                <div class="genre-card" data-genre="electronic">
+                    <div class="genre-icon">🎛️</div>
+                    <h3>Electronic</h3>
+                    <p>Digital soundscapes</p>
+                </div>
+                <div class="genre-card" data-genre="jazz">
+                    <div class="genre-icon">🎺</div>
+                    <h3>Jazz</h3>
+                    <p>Smooth & sophisticated</p>
+                </div>
+                <div class="genre-card" data-genre="classical">
+                    <div class="genre-icon">🎻</div>
+                    <h3>Classical</h3>
+                    <p>Timeless compositions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Catalog -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <div class="catalog-header">
+                <h2 class="section-title">Music Catalog</h2>
+                <div class="catalog-controls">
+                    <select id="genreFilter">
+                        <option value="all">All Genres</option>
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="hip-hop">Hip Hop</option>
+                        <option value="electronic">Electronic</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="classical">Classical</option>
+                        <option value="indie">Indie</option>
+                        <option value="country">Country</option>
+                    </select>
+                    <select id="sortFilter">
+                        <option value="default">Sort by</option>
+                        <option value="title">Title A-Z</option>
+                        <option value="artist">Artist A-Z</option>
+                        <option value="year">Year</option>
+                        <option value="popularity">Popularity</option>
+                    </select>
+                    <button class="view-toggle" id="viewToggle">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- Music catalog will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Playlists Section -->
+    <section class="playlists" id="playlists">
+        <div class="container">
+            <h2 class="section-title">Curated Playlists</h2>
+            <div class="playlists-grid" id="playlistsGrid">
+                <!-- Playlists will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Artists Section -->
+    <section class="artists" id="artists">
+        <div class="container">
+            <h2 class="section-title">Featured Artists</h2>
+            <div class="artists-grid" id="artistsGrid">
+                <!-- Artists will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Player Modal -->
+    <div class="modal" id="playerModal">
+        <div class="modal-content player-modal">
+            <div class="modal-header">
+                <h3 id="playerTitle">Now Playing</h3>
+                <button class="close-btn" id="closePlayer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="player-content" id="playerContent">
+                <!-- Audio player will be loaded here -->
+            </div>
+            <div class="player-controls">
+                <button class="player-btn" id="favoriteBtn">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="player-btn" id="shareBtn">
+                    <i class="fas fa-share"></i>
+                </button>
+                <button class="player-btn" id="downloadBtn">
+                    <i class="fas fa-download"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Modal -->
+    <div class="modal" id="favoritesModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-heart"></i> Your Favorites</h3>
+                <button class="close-btn" id="closeFavorites">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="favorites-content" id="favoritesContent">
+                <!-- Favorites will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-music"></i> SoundWave</h3>
+                    <p>Your ultimate destination for discovering and streaming amazing music from around the world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        <a href="#"><i class="fab fa-apple"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-soundcloud"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#catalog">Catalog</a></li>
+                        <li><a href="#playlists">Playlists</a></li>
+                        <li><a href="#genres">Genres</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Genres</h4>
+                    <ul>
+                        <li>Pop Music</li>
+                        <li>Rock & Alternative</li>
+                        <li>Hip Hop & Rap</li>
+                        <li>Electronic & Dance</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p><i class="fas fa-envelope"></i> info@soundwave.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Music City, USA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SoundWave. All rights reserved. Music streaming for everyone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-music"></i>
+            <span id="toastMessage">Welcome to SoundWave!</span>
+        </div>
+    </div>
+
+    <script src="music-catalog.js"></script>
+</body>
+
+</html>

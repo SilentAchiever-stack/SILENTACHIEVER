@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africana Swallow - Authentic African Cuisine</title>
+    <link rel="stylesheet" href="africana-swallow.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1><i class="fas fa-utensils"></i> Africana Swallow</h1>
+                <p class="tagline">Authentic African Flavors</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Welcome to Africana Swallow</h2>
+            <p>Experience the rich flavors and traditions of authentic African cuisine</p>
+            <div class="hero-buttons">
+                <button class="cta-btn primary" onclick="scrollToSection('menu')">
+                    <i class="fas fa-utensils"></i>
+                    View Menu
+                </button>
+                <button class="cta-btn secondary" onclick="scrollToSection('about')">
+                    <i class="fas fa-info-circle"></i>
+                    Learn More
+                </button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="food-showcase">
+                <div class="food-item">🍛</div>
+                <div class="food-item">🍚</div>
+                <div class="food-item">🥘</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dishes -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <h2 class="section-title">Our Signature Dishes</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-image">🍛</div>
+                    <h3>Jollof Rice</h3>
+                    <p>The crown jewel of West African cuisine</p>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-image">🥘</div>
+                    <h3>Amala & Ewedu</h3>
+                    <p>Traditional Yoruba delicacy with rich soup</p>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-image">🍚</div>
+                    <h3>Pounded Yam</h3>
+                    <p>Smooth, stretchy perfection with your choice of soup</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All Dishes</button>
+                <button class="category-btn" data-category="rice">Rice Dishes</button>
+                <button class="category-btn" data-category="swallow">Swallow</button>
+                <button class="category-btn" data-category="soup">Soups</button>
+                <button class="category-btn" data-category="sides">Sides</button>
+            </div>
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Africana Swallow</h2>
+                    <p>At Africana Swallow, we bring you the authentic taste of Africa with recipes passed down through
+                        generations. Our kitchen is a celebration of African heritage, where traditional cooking methods
+                        meet modern dining experience.</p>
+
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>Fresh Ingredients</h4>
+                                <p>We source the finest African spices and fresh ingredients</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Traditional Recipes</h4>
+                                <p>Authentic recipes from various African cultures</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Family Atmosphere</h4>
+                                <p>Warm, welcoming environment for all families</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="chef-placeholder">
+                        <i class="fas fa-chef-hat"></i>
+                        <p>Our Expert Chefs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Visit Us Today</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>123 African Heritage Street<br>Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+234 123 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon-Sun: 10:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@africanaswallow.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reservation-form">
+                    <h3>Make a Reservation</h3>
+                    <form id="reservationForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="time" id="time" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select id="guests" required>
+                                <option value="">Number of Guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5+ Guests</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-calendar-check"></i>
+                            Book Table
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-shopping-cart"></i> Your Order</h3>
+                <button class="close-btn" id="closeCart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: ₦<span id="cartTotal">0</span></strong>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-secondary" id="clearCart">Clear Cart</button>
+                    <button class="btn btn-primary" id="checkoutBtn">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-utensils"></i> Africana Swallow</h3>
+                    <p>Bringing authentic African flavors to your table with love and tradition.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Specialties</h4>
+                    <ul>
+                        <li>Jollof Rice</li>
+                        <li>Pounded Yam</li>
+                        <li>Amala & Ewedu</li>
+                        <li>Fried Rice</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +234 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@africanaswallow.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Africana Swallow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage">Item added to cart!</span>
+        </div>
+    </div>
+
+    <script src="africana-swallow.js"></script>
+</body>
+
+</html>

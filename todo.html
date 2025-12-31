@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+< lang="en">
+    <head>
+        <title>todo</title>
+        <link rel="stylesheet" href="todo.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+       
+        <select>
+            <option value="low">low priority</option>
+            <option value="medium" selected>medium priority</option>
+<option value="high">high priority</option>
+            
+        </select><br><br>
+        <button type="sunmit">+ Add Task
+ </button>
+ <div class="control"><select>
+    <option value="oldest">newest</option>
+    <option value="oldest">oldest</option>
+    <option value="oldest">oldest</option></select></div> <br><br>
+    <section>
+        <div class="task-container">
+            <div id="task-lists"></div>
+            <div id="empty">
+            <i class="fas fa-clipboard-list"></i>
+            </div>
+            <h3>NO TASKS YET</h3>
+            <p>add your first task to get started!!!</p>
+        </div>
+    </section>
+   
+    <section>
+        <div class="progress-container">
+        <h3>Today's Progress</h3>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+            <p id="progressText">0% Complete</p>
+        </section>
+   
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="span"><span class="rate" id="number">2+</span>
+    <span class="rate" id="label">completed</span>
+</div>
+    <span><i class="fas fa-react"></i>HTML5</span>
+    <i class="fab fa-html5"></i>
+    <span>HTML5</span>
+    </body>
+
+</html>

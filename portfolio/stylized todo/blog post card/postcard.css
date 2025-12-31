@@ -1,0 +1,35 @@
+.blog-post-card{
+    background-color:rgb(231, 161, 55);
+    width: 500px;
+    text-align:center;
+    outline:2px solid rgb(102, 130, 61);  
+    margin-left: auto;
+    margin-right: auto;
+}
+.post-img{
+    max-width:100%;
+    
+}
+.post-content{
+    padding:15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(102, 130, 61);
+}
+.post-title{
+    font-size:20px 2em;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+.post-excerpt{
+    font-size:14px;
+    color:rgb(56, 52, 52);
+}
+.read-more{
+    display:inline-block;
+    margin:15px 15px 15px 15px;
+    padding:10px 15px;
+    background-color:rgb(44, 112, 69);
+    color:white;
+    text-decoration:greenyellow;
+    border-radius:5px;
+}
