@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="hero-description" content="ADOVE RENTAL SERVICES">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="rentalservice.css">
+    <title>ADOVE RENT</title>
+</head>
+
+<body>
+    <header>
+        <div class="Rental">
+            <a href="#">Adove.com</a>
+        </div>
+        <div class="Rent">
+            <a href="#" class="signin" onclick="showlabel(event)"><i class="fas fa-sign-in-alt"></i>
+                <span class="label">signin</span>
+            </a>
+        </div>
+        <div class="Rent1">
+            <span>
+                <h2><a href="#"><i class="fas fa-stay"></i>stay</a></h2>
+            </span>
+            <span>
+                <h2><a href="#"><i class="fas fa-flight"></i>flight</a></h2>
+            </span><span>
+                <h2><a href="#"><i class="fas fa-car"></i>car rental</a></h2>
+            </span><span>
+                <h2><a href="#"><i class="fas fa-stay"></i>attractions</a></h2>
+            </span><span>
+                <h2><a href="#"><i class="fas fa-airport"></i>Airport taxi</a></h2>
+            </span>
+        </div>
+    </header>
+    <section class="page">
+        <h1>Holiday Rentals page</h1>
+        <p>find the holiday rentals that fit your appeal the most!!!</p>
+    </section>
+    <section id="schedule">
+        <div class="schedule-grid">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Where are you going?">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="calendar">
+                <label for="check-in">Check-in</label>
+                <input type="date" id="check-in" name="check-in">
+            </div>
+
+            <div class="calendar2">
+                <label for="check-out">Check-out</label>
+                <input type="date" id="check-out" name="check-out">
+            </div>
+
+            <div class="guest-selector">
+                <div class="Adult-age">
+                    <button class="selector-btn" onclick="openModal('adultsModal')">
+                        <span class="selector-label">Adults</span>
+                        <span class="selector-value" id="adultsCount">2</span>
+                    </button>
+                </div>
+
+                <div class="Adult-age2">
+                    <button class="selector-btn" onclick="openModal('roomsModal')">
+                        <span class="selector-label">Rooms</span>
+                        <span class="selector-value" id="roomsCount">1</span>
+                    </button>
+                </div>
+
+                <div class="Adult-age3">
+                    <button class="selector-btn" onclick="openModal('childrenModal')">
+                        <span class="selector-label">Children</span>
+                        <span class="selector-value" id="childrenCount">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2>Travelling with pets? <span><i class="fas fa-toggle-off toggle-icon" id="petToggle"
+                            onclick="togglePets()"></i></span></h2>
+                <h5>Assistance animals aren't considered pets!<br><a href="#">Read more about travelling with assistance
+                        animals</a></h5>
+            </div>
+
+            <div class="search-button-container">
+                <button class="search" onclick="performSearch()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adults Modal -->
+    <div id="adultsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Adults</h3>
+                <span class="close" onclick="closeModal('adultsModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="counter-container">
+                    <button class="counter-btn" onclick="decreaseCount('adults')">-</button>
+                    <span class="counter-display" id="adultsDisplay">2</span>
+                    <button class="counter-btn" onclick="increaseCount('adults')">+</button>
+                </div>
+                <p class="counter-description">Ages 18 or above</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rooms Modal -->
+    <div id="roomsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Rooms</h3>
+                <span class="close" onclick="closeModal('roomsModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="counter-container">
+                    <button class="counter-btn" onclick="decreaseCount('rooms')">-</button>
+                    <span class="counter-display" id="roomsDisplay">1</span>
+                    <button class="counter-btn" onclick="increaseCount('rooms')">+</button>
+                </div>
+                <p class="counter-description">Number of rooms needed</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Children Modal -->
+    <div id="childrenModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Children</h3>
+                <span class="close" onclick="closeModal('childrenModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="counter-container">
+                    <button class="counter-btn" onclick="decreaseCount('children')">-</button>
+                    <span class="counter-display" id="childrenDisplay">0</span>
+                    <button class="counter-btn" onclick="increaseCount('children')">+</button>
+                </div>
+                <p class="counter-description">Ages 0-17</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Counter values
+        let counts = {
+            adults: 2,
+            rooms: 1,
+            children: 0
+        };
+
+        // Pet toggle state
+        let petsAllowed = false;
+
+        // Open modal function
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        // Close modal function
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        // Increase count function
+        function increaseCount(type) {
+            if (type === 'adults' && counts[type] < 10) {
+                counts[type]++;
+            } else if (type === 'rooms' && counts[type] < 8) {
+                counts[type]++;
+            } else if (type === 'children' && counts[type] < 10) {
+                counts[type]++;
+            }
+            updateDisplay(type);
+        }
+
+        // Decrease count function
+        function decreaseCount(type) {
+            if (type === 'adults' && counts[type] > 1) {
+                counts[type]--;
+            } else if (type === 'rooms' && counts[type] > 1) {
+                counts[type]--;
+            } else if (type === 'children' && counts[type] > 0) {
+                counts[type]--;
+            }
+            updateDisplay(type);
+        }
+
+        // Update display function
+        function updateDisplay(type) {
+            document.getElementById(type + 'Display').textContent = counts[type];
+            document.getElementById(type + 'Count').textContent = counts[type];
+        }
+
+        // Toggle pets function
+        function togglePets() {
+            petsAllowed = !petsAllowed;
+            const toggleIcon = document.getElementById('petToggle');
+            if (petsAllowed) {
+                toggleIcon.className = 'fas fa-toggle-on toggle-icon active';
+            } else {
+                toggleIcon.className = 'fas fa-toggle-off toggle-icon';
+            }
+        }
+
+        // Search function
+        function performSearch() {
+            const destination = document.getElementById('searchInput').value;
+            const checkIn = document.getElementById('check-in').value;
+            const checkOut = document.getElementById('check-out').value;
+
+            if (!destination || !checkIn || !checkOut) {
+                alert('Please fill in all required fields');
+                return;
+            }
+
+            // Here you would typically send the search data to your backend
+            console.log('Search parameters:', {
+                destination,
+                checkIn,
+                checkOut,
+                adults: counts.adults,
+                rooms: counts.rooms,
+                children: counts.children,
+                pets: petsAllowed
+            });
+
+            alert('Searching for rentals...');
+        }
+
+        // Show signin label function
+        function showlabel(event) {
+            event.preventDefault();
+            // Add your signin logic here
+            console.log('Sign in clicked');
+        }
+    </script>
+</body>
+
+</html>
